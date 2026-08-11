@@ -1,0 +1,340 @@
+@charset "utf-8"
+
+// font
+.helvetica
+    font-family: "helvetica-lt-pro", sans-serif
+    font-weight: 400
+    font-style: normal
+
+.helvetica_b
+    font-family: "helvetica-lt-pro", sans-serif
+    font-weight: 700
+    font-style: normal
+
+.source_han_sans
+    font-family: "source-han-sans-japanese", sans-serif
+    font-weight: 300
+    font-style: normal
+
+
+// common
+body
+    color: #333
+    overflow-wrap: break-word
+
+img
+    width: 100%
+    vertical-align: bottom
+
+.mv
+    width: 100vw
+    height: 32vh
+    position: relative
+    border-bottom: 1px solid #eee
+
+    &_title
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        font-size: 24px
+        letter-spacing: .2em
+
+        span
+            font-size: 14px
+            display: block
+            color: #999
+            letter-spacing: .2em
+
+.contents
+    &_title
+        text-align: center
+        padding: 56px 0 32px
+        letter-spacing: .1em
+        font-size: 28px
+
+    &_portforio
+        padding: 0 0 48px
+        background-color: #fcfcfc
+        border-bottom: 1px solid #eee
+
+        &--header
+            padding: 0 0 12px
+
+            &_ul
+                display: flex
+                justify-content: center
+                gap: 40px
+                padding: 0
+
+            &_li
+                list-style: none
+                text-align: center
+                color: #aaa
+                transition: .4s
+                cursor: pointer
+                position: relative
+
+                &:hover
+                    opacity: .4
+
+                &.on
+                    color: #000
+                    pointer-events: none
+        
+        &--contents
+            display: flex
+            max-width: 920px
+            flex-wrap: wrap
+            margin: 12px auto 0
+            gap: 8px
+            padding: 0 20px        
+
+        &--box
+            width: calc(25% - 8px)
+            transition: .4s
+            margin-bottom: 20px
+
+            @media screen and (max-width: 768px)
+                width: calc(50% - 8px)
+
+
+            &:hover
+                opacity: .6
+
+        &--p
+            font-size: 14px
+            text-align: center
+            margin-top: 12px
+
+        &--image
+            cursor: pointer
+
+    &_profile
+        padding-bottom: 64px
+
+        &--contents
+            margin: 0 auto
+            max-width: 840px
+            padding: 0 20px
+
+            dl
+                display: flex
+                border-bottom: 1px solid #ddd
+                font-size: 14px
+                padding: 20px 8px 12px
+                align-items: center
+
+                dt
+                    width: 40%
+                    color: #666
+                    font-size: 12px
+
+                dd
+                    width: 60%
+
+
+    &_career
+        padding-bottom: 48px
+
+        &--contents
+            margin: 0 auto
+            max-width: 840px
+            padding: 0 20px
+
+            dl
+                display: flex
+                border-bottom: 1px solid #ddd
+                font-size: 14px
+                padding: 20px 8px 12px
+                align-items: center
+
+                @media screen and (max-width: 768px)
+                    flex-direction: column
+                    padding: 24px 8px 16px
+
+                dt
+                    width: 40%
+                    color: #666
+                    font-size: 12px
+
+                    @media screen and (max-width: 768px)
+                        width: 100%
+                        margin-bottom: 4px
+
+                dd
+                    width: 60%
+
+                    @media screen and (max-width: 768px)
+                        width: 100%
+
+    &_skill
+        padding-bottom: 48px
+
+        &--contents
+            margin: 0 auto
+            max-width: 840px
+            padding: 0 20px
+
+            dl
+                display: flex
+                border-bottom: 1px solid #ddd
+                font-size: 14px
+                padding: 20px 8px 12px
+                align-items: center
+
+                @media screen and (max-width: 768px)
+                    flex-direction: column
+                    padding: 24px 8px 16px
+
+                dt
+                    width: 34%
+                    color: #666
+                    font-size: 12px
+
+                    @media screen and (max-width: 768px)
+                        width: 100%
+                        margin-bottom: 4px
+
+                dd
+                    width: 58%
+                    margin: 0 24px
+
+                    @media screen and (max-width: 768px)
+                        width: 100%
+                        margin: 0
+
+                    &:last-child
+                        width: 16%
+                        margin: 0
+
+                        @media screen and (max-width: 768px)
+                            width: 100%
+                            margin-top: 4px
+
+
+// modal
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0,0,0,.4)
+    display: none
+    justify-content: center
+    align-items: center
+
+    &_contents
+        width: 90vw
+        height: 90vh
+        display: flex
+        background-color: #fff
+
+        &--image
+            width: 50%
+            overflow: scroll
+            overscroll-behavior: contain
+
+            img
+                width: 100%
+
+        &--imagepc
+            display: none
+
+            &.on
+                display: block
+
+        &--imagesp
+            display: none
+
+            &.on
+                display: block
+
+        &--change
+            color: #fff
+
+            &.on
+                color: #333
+
+        &--content
+            width: 50%
+            padding: 3%
+            overflow: scroll
+            overscroll-behavior: contain
+
+        &--dl
+            padding: 14px 0
+            border-bottom: 1px solid #eee
+
+        &--dt
+            color: #888
+            font-size: 12px
+            padding-bottom: 2px
+        
+        &--dd
+            font-size: 14px
+            word-break: break-all
+
+        &--changebtn
+            position: sticky
+            bottom: 4%
+            display: flex
+            gap: 34%
+            background-color: #eee
+            color: #fff
+            width: 38%
+            padding: 12px
+            justify-content: center
+            left: 50%
+            transform: translateX(-50%)
+            border-radius: 9999px
+            margin-top: -48px
+            cursor: pointer
+
+            &:before
+                content: ""
+                position: absolute
+                display: block
+                width: 1px
+                height: 50%
+                background-color: #fff
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+
+    &.on
+        display: flex
+
+#web
+    color: #ccc
+
+    &.on
+        color: #000
+
+#banner
+    color: #ccc
+
+    &.on
+        color: #000
+
+.contents_portforio--web
+    display: none
+
+    &.on
+        display: block
+
+.contents_portforio--banner
+    display: none
+
+    &.on
+        display: block
+
+.copyright
+    font-size: 12px
+    padding: 14px 0
+    text-align: center
+    margin-top: 32px
+    color: #888
