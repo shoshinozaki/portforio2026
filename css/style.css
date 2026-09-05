@@ -318,10 +318,28 @@ img {
   background-color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .modal_contents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    overflow: scroll;
+    overscroll-behavior: contain;
+  }
+}
+
 .modal_contents--image {
   width: 50%;
   overflow: scroll;
   overscroll-behavior: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .modal_contents--image {
+    width: 100%;
+    overflow: visible;
+  }
 }
 
 .modal_contents--image img {
@@ -357,6 +375,14 @@ img {
   padding: 3%;
   overflow: scroll;
   overscroll-behavior: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .modal_contents--content {
+    width: 100%;
+    overflow: visible;
+    padding: 6%;
+  }
 }
 
 .modal_contents--dl {

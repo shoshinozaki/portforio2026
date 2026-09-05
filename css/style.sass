@@ -233,10 +233,19 @@ img
         display: flex
         background-color: #fff
 
+        @media screen and (max-width: 768px)
+            flex-direction: column-reverse
+            overflow: scroll
+            overscroll-behavior: contain
+
         &--image
             width: 50%
             overflow: scroll
             overscroll-behavior: contain
+
+            @media screen and (max-width: 768px)
+                width: 100%
+                overflow: visible
 
             img
                 width: 100%
@@ -264,6 +273,11 @@ img
             padding: 3%
             overflow: scroll
             overscroll-behavior: contain
+
+            @media screen and (max-width: 768px)
+                width: 100%
+                overflow: visible
+                padding: 6%
 
         &--dl
             padding: 14px 0
