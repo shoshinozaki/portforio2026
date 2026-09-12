@@ -73,3 +73,22 @@ document.addEventListener('DOMContentLoaded', () => {
         portforioBannerContents.classList.add('on');
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // カンマ区切りで複数のクラスをまとめて取得
+    const targets = document.querySelectorAll('.fade-in-up, .fade-in');
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -10% 0px',
+      threshold: 0.1
+    });
+  
+    targets.forEach(target => observer.observe(target));
+});

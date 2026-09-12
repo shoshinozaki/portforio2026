@@ -16,6 +16,21 @@
     font-weight: 300
     font-style: normal
 
+.bodoni_normal
+    font-family: "bodoni-urw", serif
+    font-weight: 400
+    font-style: normal
+
+.bodoni_bold
+    font-family: "bodoni-urw", serif
+    font-weight: 700
+    font-style: normal
+
+.tsuku
+    font-family: "fot-tsukuaoldmin-pr6n", sans-serif
+    font-weight: 300
+    font-style: normal
+
 
 // common
 body
@@ -352,3 +367,22 @@ img
     text-align: center
     margin-top: 32px
     color: #888
+
+.fade-in-up
+  opacity: 0
+  transform: translateY(20px)
+  transition: opacity 0.8s ease, transform 0.8s ease
+  will-change: opacity, transform
+
+.fade-in-up.is-active
+  opacity: 1
+  transform: translateY(0)
+
+.fade-in
+  opacity: 0
+  transition: opacity 2s ease, transform 2s ease
+  will-change: opacity, transform
+
+.fade-in.is-active
+  opacity: 1
+  transform: translate(-50%, -50%)

@@ -16,6 +16,24 @@
   font-style: normal;
 }
 
+.bodoni_normal {
+  font-family: "bodoni-urw", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bodoni_bold {
+  font-family: "bodoni-urw", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tsuku {
+  font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
 body {
   color: #333;
   overflow-wrap: break-word;
@@ -481,5 +499,37 @@ img {
   text-align: center;
   margin-top: 32px;
   color: #888;
+}
+
+.fade-in-up {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: opacity 0.8s ease, -webkit-transform 0.8s ease;
+  transition: opacity 0.8s ease, -webkit-transform 0.8s ease;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.8s ease, transform 0.8s ease, -webkit-transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in-up.is-active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-transition: opacity 2s ease, -webkit-transform 2s ease;
+  transition: opacity 2s ease, -webkit-transform 2s ease;
+  transition: opacity 2s ease, transform 2s ease;
+  transition: opacity 2s ease, transform 2s ease, -webkit-transform 2s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in.is-active {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=style.css.map */
