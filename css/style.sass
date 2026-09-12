@@ -43,9 +43,11 @@ img
 
 .mv
     width: 100vw
-    height: 32vh
-    position: relative
+    min-height: 100vh
+    position: sticky
     border-bottom: 1px solid #eee
+    top: 0
+    z-index: 0
 
     &_title
         position: absolute
@@ -63,6 +65,8 @@ img
             letter-spacing: .2em
 
 .contents
+    background-color: #fff
+
     &_title
         text-align: center
         padding: 56px 0 32px
@@ -73,6 +77,11 @@ img
         padding: 0 0 48px
         background-color: #fcfcfc
         border-bottom: 1px solid #eee
+        position: sticky
+        top: 0
+        max-height: 100vh
+        overflow-y: auto
+        z-index: 10
 
         &--header
             padding: 0 0 12px
@@ -128,6 +137,10 @@ img
 
     &_profile
         padding-bottom: 64px
+        background-color: #fff
+        position: sticky
+        top: 0
+        z-index: 20
 
         &--contents
             margin: 0 auto
@@ -152,6 +165,10 @@ img
 
     &_career
         padding-bottom: 48px
+        background-color: #fff
+        position: sticky
+        top: 0
+        z-index: 30
 
         &--contents
             margin: 0 auto
@@ -186,6 +203,11 @@ img
 
     &_skill
         padding-bottom: 48px
+        background-color: #fff
+        position: sticky
+        top: 0
+        z-index: 40
+        padding-bottom: 300px
 
         &--contents
             margin: 0 auto
@@ -241,6 +263,7 @@ img
     display: none
     justify-content: center
     align-items: center
+    z-index: 99
 
     &_contents
         width: 90vw
